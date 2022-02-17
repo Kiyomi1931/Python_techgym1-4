@@ -7,14 +7,15 @@ def start_message():
 
 def get_my_hand():
   print('自分の手を入力してください')
-  input_message=''
-  index=0
+  input_message = ''
+  index = 0
   for hand in hands:
-    input_message+=str(index)+':'+hand
-    if index<2:
-      input_message+=','
-      index+=1
+    input_message += str(index) + ':' + hand
+    if index < 2:
+      input_message += ', '
+    index += 1
   return int(input(input_message))
+
 def get_you_hand():
   return random.randint(0, 2)
 
