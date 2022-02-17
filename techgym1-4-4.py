@@ -6,6 +6,7 @@ def start_message():
 def get_my_hand():
   print('自分の手を入力してください')
   return int(input('0:グー, 1:チョキ, 2:パー'))
+
 def get_you_hand():
   return random.randint(0, 2)
 
@@ -18,8 +19,9 @@ def view_result(hand_diff):
     print('負け')
 
 start_message()
-my_hand=get_my_hand()
-you_hand=get_you_hand()
+
+my_hand = get_my_hand()
+you_hand = get_you_hand()
 hand_diff = my_hand - you_hand
 
 view_result(hand_diff)
